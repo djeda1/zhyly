@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Zhyly · family café in Almaty</title>
+  <meta name="description" content="Zhyly, a family café in Almaty. Kazakh and home-style cooking, kids menu and a play room. Menu with photos and prices, table booking. Website concept.">
+  <meta name="theme-color" content="#F3F4EE" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0E1612" media="(prefers-color-scheme: dark)">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="alternate" hreflang="ru" href="../">
+  <link rel="alternate" hreflang="en" href="./">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="preload" as="image" href="../img/hero.webp" fetchpriority="high">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700&family=Unbounded:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
+  <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/fill/style.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+  <a class="skip" href="#menu">Skip to menu</a>
+
+  <header class="top wrap">
+    <a href="#" class="wordmark" aria-label="Zhyly, back to top">zhyly</a>
+    <nav class="lang" aria-label="Language">
+      <a href="../" hreflang="ru" lang="ru">RU</a>
+      <a href="./" aria-current="page">EN</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- Hero -->
+    <section class="hero wrap">
+      <div class="hero-copy">
+        <h1 class="hero-title">
+          Cooked <span class="title-pic" aria-hidden="true"><img src="../img/plov-s.webp" alt="" width="160" height="160"></span> like it’s for&nbsp;family
+        </h1>
+        <p class="hero-sub">Kazakh and home-style cooking, big tables and a kids play room. Bring the whole family.</p>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="tel:+77000000000"><i class="ph ph-phone" aria-hidden="true"></i>Book a table</a>
+          <a class="link-arrow" href="#menu">See the menu <i class="ph ph-arrow-down" aria-hidden="true"></i></a>
+        </div>
+        <p class="hero-status"><span class="status" id="status" data-state="open">Open until 11 pm</span><span class="hero-addr">58 Zhandosov St</span></p>
+      </div>
+
+      <figure class="hero-media">
+        <img class="hero-img" src="../img/hero.webp" alt="Friends sharing a big table: burgers, fries, salads" width="1400" height="933" fetchpriority="high">
+        <img class="hero-img-2" src="../img/window-s.webp" alt="" width="320" height="320" loading="lazy">
+        <div class="sticker" aria-label="Kids menu with a gift">
+          <svg viewBox="0 0 120 120" aria-hidden="true">
+            <defs><path id="ring" d="M60,60 m-44,0 a44,44 0 1,1 88,0 a44,44 0 1,1 -88,0"/></defs>
+            <text><textPath href="#ring" textLength="272">kids menu · a gift with every dish ·</textPath></text>
+          </svg>
+          <i class="ph-fill ph-gift" aria-hidden="true"></i>
+        </div>
+      </figure>
+    </section>
+
+    <!-- Amenities -->
+    <div class="ribbon-clip">
+    <div class="ribbon" aria-label="Family amenities">
+      <div class="ribbon-track">
+        <ul class="ribbon-list">
+          <li><i class="ph ph-puzzle-piece" aria-hidden="true"></i>Kids play room</li>
+          <li><i class="ph ph-baby" aria-hidden="true"></i>High chairs</li>
+          <li><i class="ph ph-balloon" aria-hidden="true"></i>Entertainer on weekends</li>
+          <li><i class="ph ph-wifi-high" aria-hidden="true"></i>Free Wi-Fi</li>
+          <li><i class="ph ph-car" aria-hidden="true"></i>Free parking</li>
+        </ul>
+        <ul class="ribbon-list" aria-hidden="true">
+          <li><i class="ph ph-puzzle-piece"></i>Kids play room</li>
+          <li><i class="ph ph-baby"></i>High chairs</li>
+          <li><i class="ph ph-balloon"></i>Entertainer on weekends</li>
+          <li><i class="ph ph-wifi-high"></i>Free Wi-Fi</li>
+          <li><i class="ph ph-car"></i>Free parking</li>
+        </ul>
+      </div>
+    </div>
+    </div>
+
+    <!-- Guest favourites -->
+    <section class="favs" aria-labelledby="favs-title">
+      <h2 class="wrap h2 reveal" id="favs-title">Guest favourites</h2>
+      <div class="rail" id="featured" role="list"></div>
+    </section>
+
+    <!-- Menu -->
+    <section class="menu" id="menu" aria-labelledby="menu-title">
+      <div class="wrap menu-head">
+        <h2 class="h-menu reveal" id="menu-title">Menu</h2>
+        <p class="hint">Prices in tenge. Tap a dish to see it up close.</p>
+      </div>
+
+      <div class="catbar" id="catbar">
+        <div class="wrap catbar-inner">
+          <button class="icon-btn" id="search-open" type="button" aria-label="Search the menu"><i class="ph ph-magnifying-glass"></i></button>
+          <nav class="chips" id="chips" aria-label="Menu sections"></nav>
+          <form class="search" id="search" role="search" hidden>
+            <i class="ph ph-magnifying-glass" aria-hidden="true"></i>
+            <input id="q" type="search" placeholder="Plov, pancakes, lemonade…" autocomplete="off" enterkeyhint="search" aria-label="Search the menu">
+            <button class="search-close" id="search-close" type="button">Cancel</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="wrap">
+        <div class="filters" id="filters" role="group" aria-label="Filters"></div>
+        <div id="sections"></div>
+        <div class="empty" id="empty" hidden>
+          <p class="empty-title">We don’t have that yet</p>
+          <p class="empty-text">Try another word or clear the filters</p>
+          <button class="btn btn-ghost" id="reset" type="button">Show the full menu</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- With kids -->
+    <section class="kids-block wrap" aria-labelledby="kids-title">
+      <div class="kids-photos reveal">
+        <img class="kp-1" src="../img/interior.webp" alt="Café hall with plants and wooden tables" width="1000" height="667" loading="lazy">
+        <img class="kp-2" src="../img/rainbow-cake-s.webp" alt="Rainbow cake on a stand" width="320" height="320" loading="lazy">
+      </div>
+      <div class="kids-copy reveal">
+        <h2 class="h2" id="kids-title">Noise is welcome here</h2>
+        <p>While the kids build castles in the play room, grown-ups get to finish a hot meal. On weekends an entertainer is here from noon to 6 pm.</p>
+        <p>Celebrating a birthday? Give us a day’s notice and we’ll bake a whole rainbow cake.</p>
+      </div>
+    </section>
+
+    <!-- Reviews -->
+    <section class="notes wrap" aria-labelledby="notes-title">
+      <h2 class="h2 reveal" id="notes-title">What guests say</h2>
+      <div class="notes-grid">
+        <figure class="note reveal">
+          <blockquote>Beshbarmak just like grandma’s. My son ate his nuggets and half of my lagman.</blockquote>
+          <figcaption>Aigerim, mum of two boys</figcaption>
+        </figure>
+        <figure class="note reveal">
+          <blockquote>We had dad’s 60th here, 14 of us. The grill platter was gone in ten minutes.</blockquote>
+          <figcaption>Yerzhan, celebrated his father’s birthday</figcaption>
+        </figure>
+        <figure class="note reveal">
+          <blockquote>We come every Saturday for the pancakes and the entertainer. My daughter always asks about her gift.</blockquote>
+          <figcaption>Dinara, comes every Saturday</figcaption>
+        </figure>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" id="contacts">
+    <div class="wrap">
+      <p class="footer-mark" aria-hidden="true">zhyly</p>
+      <dl class="contacts">
+        <div><dt>Address</dt><dd>58 Zhandosov St, Almaty,<br>corner of Baizakov St</dd></div>
+        <div><dt>Hours</dt><dd>Daily, 9 am to 11 pm<br>Breakfast until noon</dd></div>
+        <div><dt>Bookings & delivery</dt><dd><a href="tel:+77000000000">+7 700 000 00 00</a></dd></div>
+      </dl>
+      <div class="footer-links">
+        <a href="https://2gis.kz/almaty/search/%D0%96%D0%B0%D0%BD%D0%B4%D0%BE%D1%81%D0%BE%D0%B2%D0%B0%2058" target="_blank" rel="noopener"><i class="ph ph-navigation-arrow" aria-hidden="true"></i>Directions in 2GIS</a>
+        <a href="https://wa.me/77000000000" target="_blank" rel="noopener"><i class="ph ph-whatsapp-logo" aria-hidden="true"></i>WhatsApp</a>
+        <a href="https://instagram.com/" target="_blank" rel="noopener"><i class="ph ph-instagram-logo" aria-hidden="true"></i>Instagram</a>
+      </div>
+      <p class="fine">10% service charge. Tell your waiter about any allergies and we’ll help you choose.</p>
+      <details class="credits">
+        <summary>Website concept, the café is fictional. Photos</summary>
+        <p>Food photos: Unsplash. <span id="credits"></span></p>
+      </details>
+    </div>
+  </footer>
+
+  <!-- My picks bar -->
+  <button class="cartbar" id="cartbar" type="button" hidden>
+    <span class="cartbar-count" id="cartbar-count">0</span>
+    <span class="cartbar-label">My picks</span>
+    <span class="cartbar-sum" id="cartbar-sum">0 ₸</span>
+  </button>
+
+  <!-- Dish sheet -->
+  <div class="sheet" id="dish-sheet" role="dialog" aria-modal="true" aria-labelledby="dish-title" hidden>
+    <div class="sheet-backdrop" data-close></div>
+    <div class="sheet-panel">
+      <button class="sheet-x" type="button" data-close aria-label="Close"><i class="ph ph-x"></i></button>
+      <div id="dish-body"></div>
+    </div>
+  </div>
+
+  <!-- My picks sheet -->
+  <div class="sheet" id="cart-sheet" role="dialog" aria-modal="true" aria-labelledby="cart-title" hidden>
+    <div class="sheet-backdrop" data-close></div>
+    <div class="sheet-panel">
+      <div class="sheet-grip" aria-hidden="true"></div>
+      <button class="sheet-x" type="button" data-close aria-label="Close"><i class="ph ph-x"></i></button>
+      <div id="cart-body"></div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="../js/menu.js"></script>
+  <script src="../js/main.js"></script>
+</body>
+</html>

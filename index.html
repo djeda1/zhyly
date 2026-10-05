@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Жылы · семейное кафе в Алматы</title>
+  <meta name="description" content="Жылы: семейное кафе в Алматы. Казахская и домашняя кухня, детское меню и детская комната. Меню с фото и ценами, бронь стола. Концепт сайта.">
+  <meta name="theme-color" content="#F3F4EE" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0E1612" media="(prefers-color-scheme: dark)">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="alternate" hreflang="ru" href="./">
+  <link rel="alternate" hreflang="en" href="en/">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preload" as="image" href="img/hero.webp" fetchpriority="high">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700&family=Unbounded:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
+  <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/fill/style.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+  <a class="skip" href="#menu">К меню</a>
+
+  <header class="top wrap">
+    <a href="#" class="wordmark" aria-label="Жылы, наверх">жылы</a>
+    <nav class="lang" aria-label="Язык">
+      <a href="./" aria-current="page">RU</a>
+      <a href="en/" hreflang="en" lang="en">EN</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- Первый экран -->
+    <section class="hero wrap">
+      <div class="hero-copy">
+        <h1 class="hero-title">
+          Готовим, <span class="title-pic" aria-hidden="true"><img src="img/plov-s.webp" alt="" width="160" height="160"></span> как&nbsp;для&nbsp;своих
+        </h1>
+        <p class="hero-sub">Казахская и домашняя кухня, большие столы и детская комната. Приходите всей семьёй.</p>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="tel:+77000000000"><i class="ph ph-phone" aria-hidden="true"></i>Забронировать</a>
+          <a class="link-arrow" href="#menu">Открыть меню <i class="ph ph-arrow-down" aria-hidden="true"></i></a>
+        </div>
+        <p class="hero-status"><span class="status" id="status" data-state="open">Открыто до 23:00</span><span class="hero-addr">ул. Жандосова, 58</span></p>
+      </div>
+
+      <figure class="hero-media">
+        <img class="hero-img" src="img/hero.webp" alt="Компания за большим столом: бургеры, картофель, салаты" width="1400" height="933" fetchpriority="high">
+        <img class="hero-img-2" src="img/window-s.webp" alt="" width="320" height="320" loading="lazy">
+        <div class="sticker" aria-label="Детское меню с подарком">
+          <svg viewBox="0 0 120 120" aria-hidden="true">
+            <defs><path id="ring" d="M60,60 m-44,0 a44,44 0 1,1 88,0 a44,44 0 1,1 -88,0"/></defs>
+            <text><textPath href="#ring" textLength="272">детское меню · подарок к каждому блюду ·</textPath></text>
+          </svg>
+          <i class="ph-fill ph-gift" aria-hidden="true"></i>
+        </div>
+      </figure>
+    </section>
+
+    <!-- Удобства -->
+    <div class="ribbon-clip">
+    <div class="ribbon" aria-label="Удобства для семей">
+      <div class="ribbon-track">
+        <ul class="ribbon-list">
+          <li><i class="ph ph-puzzle-piece" aria-hidden="true"></i>Детская комната</li>
+          <li><i class="ph ph-baby" aria-hidden="true"></i>Стульчики для малышей</li>
+          <li><i class="ph ph-balloon" aria-hidden="true"></i>Аниматор по выходным</li>
+          <li><i class="ph ph-wifi-high" aria-hidden="true"></i>Бесплатный Wi-Fi</li>
+          <li><i class="ph ph-car" aria-hidden="true"></i>Своя парковка</li>
+        </ul>
+        <ul class="ribbon-list" aria-hidden="true">
+          <li><i class="ph ph-puzzle-piece"></i>Детская комната</li>
+          <li><i class="ph ph-baby"></i>Стульчики для малышей</li>
+          <li><i class="ph ph-balloon"></i>Аниматор по выходным</li>
+          <li><i class="ph ph-wifi-high"></i>Бесплатный Wi-Fi</li>
+          <li><i class="ph ph-car"></i>Своя парковка</li>
+        </ul>
+      </div>
+    </div>
+    </div>
+
+    <!-- Любимое гостями -->
+    <section class="favs" aria-labelledby="favs-title">
+      <h2 class="wrap h2 reveal" id="favs-title">Любимое гостями</h2>
+      <div class="rail" id="featured" role="list"></div>
+    </section>
+
+    <!-- Меню -->
+    <section class="menu" id="menu" aria-labelledby="menu-title">
+      <div class="wrap menu-head">
+        <h2 class="h-menu reveal" id="menu-title">Меню</h2>
+        <p class="hint">Цены в тенге. Нажмите на блюдо, чтобы увидеть его крупнее.</p>
+      </div>
+
+      <div class="catbar" id="catbar">
+        <div class="wrap catbar-inner">
+          <button class="icon-btn" id="search-open" type="button" aria-label="Поиск по меню"><i class="ph ph-magnifying-glass"></i></button>
+          <nav class="chips" id="chips" aria-label="Разделы меню"></nav>
+          <form class="search" id="search" role="search" hidden>
+            <i class="ph ph-magnifying-glass" aria-hidden="true"></i>
+            <input id="q" type="search" placeholder="Плов, панкейки, лимонад…" autocomplete="off" enterkeyhint="search" aria-label="Поиск по меню">
+            <button class="search-close" id="search-close" type="button">Отмена</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="wrap">
+        <div class="filters" id="filters" role="group" aria-label="Фильтры"></div>
+        <div id="sections"></div>
+        <div class="empty" id="empty" hidden>
+          <p class="empty-title">Такого у нас пока нет</p>
+          <p class="empty-text">Попробуйте другое слово или снимите фильтры</p>
+          <button class="btn btn-ghost" id="reset" type="button">Показать всё меню</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- С детьми -->
+    <section class="kids-block wrap" aria-labelledby="kids-title">
+      <div class="kids-photos reveal">
+        <img class="kp-1" src="img/interior.webp" alt="Зал кафе с зеленью и деревянными столами" width="1000" height="667" loading="lazy">
+        <img class="kp-2" src="img/rainbow-cake-s.webp" alt="Торт «Радуга» на подставке" width="320" height="320" loading="lazy">
+      </div>
+      <div class="kids-copy reveal">
+        <h2 class="h2" id="kids-title">Здесь можно шуметь</h2>
+        <p>Пока дети строят замки в игровой, взрослые спокойно едят горячее. По выходным с 12:00 до 18:00 работает аниматор.</p>
+        <p>Отмечаете день рождения? Торт «Радуга» испечём целиком, если предупредите за сутки.</p>
+      </div>
+    </section>
+
+    <!-- Отзывы -->
+    <section class="notes wrap" aria-labelledby="notes-title">
+      <h2 class="h2 reveal" id="notes-title">Что говорят гости</h2>
+      <div class="notes-grid">
+        <figure class="note reveal">
+          <blockquote>Бешбармак как у апашки. Сын съел свои наггетсы и ещё половину моего лагмана.</blockquote>
+          <figcaption>Айгерим, мама двоих сыновей</figcaption>
+        </figure>
+        <figure class="note reveal">
+          <blockquote>Отмечали юбилей отца на 14 человек. Мангал на компанию закончился за десять минут.</blockquote>
+          <figcaption>Ержан, отмечал юбилей отца</figcaption>
+        </figure>
+        <figure class="note reveal">
+          <blockquote>Ходим по субботам ради панкейков и аниматора. Дочь каждый раз спрашивает про подарок.</blockquote>
+          <figcaption>Динара, приходит по субботам</figcaption>
+        </figure>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" id="contacts">
+    <div class="wrap">
+      <p class="footer-mark" aria-hidden="true">жылы</p>
+      <dl class="contacts">
+        <div><dt>Адрес</dt><dd>Алматы, ул. Жандосова, 58,<br>угол Байзакова</dd></div>
+        <div><dt>Часы</dt><dd>Каждый день 09:00-23:00<br>Завтраки до 12:00</dd></div>
+        <div><dt>Бронь и доставка</dt><dd><a href="tel:+77000000000">+7 700 000 00 00</a></dd></div>
+      </dl>
+      <div class="footer-links">
+        <a href="https://2gis.kz/almaty/search/%D0%96%D0%B0%D0%BD%D0%B4%D0%BE%D1%81%D0%BE%D0%B2%D0%B0%2058" target="_blank" rel="noopener"><i class="ph ph-navigation-arrow" aria-hidden="true"></i>Маршрут в 2ГИС</a>
+        <a href="https://wa.me/77000000000" target="_blank" rel="noopener"><i class="ph ph-whatsapp-logo" aria-hidden="true"></i>WhatsApp</a>
+        <a href="https://instagram.com/" target="_blank" rel="noopener"><i class="ph ph-instagram-logo" aria-hidden="true"></i>Instagram</a>
+      </div>
+      <p class="fine">Обслуживание 10%. Об аллергии скажите официанту, подскажем, что можно.</p>
+      <details class="credits">
+        <summary>Концепт сайта, кафе вымышленное. Фото</summary>
+        <p>Фотографии блюд: Unsplash. <span id="credits"></span></p>
+      </details>
+    </div>
+  </footer>
+
+  <!-- Плашка «Мой выбор» -->
+  <button class="cartbar" id="cartbar" type="button" hidden>
+    <span class="cartbar-count" id="cartbar-count">0</span>
+    <span class="cartbar-label">Мой выбор</span>
+    <span class="cartbar-sum" id="cartbar-sum">0 ₸</span>
+  </button>
+
+  <!-- Карточка блюда -->
+  <div class="sheet" id="dish-sheet" role="dialog" aria-modal="true" aria-labelledby="dish-title" hidden>
+    <div class="sheet-backdrop" data-close></div>
+    <div class="sheet-panel">
+      <button class="sheet-x" type="button" data-close aria-label="Закрыть"><i class="ph ph-x"></i></button>
+      <div id="dish-body"></div>
+    </div>
+  </div>
+
+  <!-- Список «Мой выбор» -->
+  <div class="sheet" id="cart-sheet" role="dialog" aria-modal="true" aria-labelledby="cart-title" hidden>
+    <div class="sheet-backdrop" data-close></div>
+    <div class="sheet-panel">
+      <div class="sheet-grip" aria-hidden="true"></div>
+      <button class="sheet-x" type="button" data-close aria-label="Закрыть"><i class="ph ph-x"></i></button>
+      <div id="cart-body"></div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="js/menu.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
